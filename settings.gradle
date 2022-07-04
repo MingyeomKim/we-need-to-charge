@@ -1,1 +1,5 @@
 rootProject.name = 'WeNeedToCharge'
+include 'post-server'
+include 'user-server'
+include 'car-server'
+
