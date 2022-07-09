@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 @Getter
 @NoArgsConstructor
@@ -15,7 +14,7 @@ import java.util.ArrayList;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_id;
+    private Long id;
 
     @Column(nullable = false)
     private String name;
@@ -24,29 +23,29 @@ public class User {
     private String nickname;
 
     @Column(nullable = false)
-    private String phone_number;
+    private String phoneNumber;
 
     @Column(nullable = false)
     private String password;
 
     @Column(nullable = false)
-    private String join_status;
+    private String joinStatus;
 
     @Column(nullable = false)
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @Column(nullable = false)
     private String status;
 
     @Builder
-    public User(Long user_id, String name, String nickname, String phone_number,
-                String join_status, LocalDateTime created_at, String status) {
-        this.user_id = user_id;
+    public User(Long id, String name, String nickname, String phoneNumber,
+                String joinStatus, LocalDateTime createdAt, String status) {
+        this.id = id;
         this.name = name;
         this.nickname = nickname;
-        this.phone_number = phone_number;
-        this.join_status = join_status;
-        this.created_at = created_at;
+        this.phoneNumber = phoneNumber;
+        this.joinStatus = joinStatus;
+        this.createdAt = createdAt;
         this.status = status;
     }
 }
