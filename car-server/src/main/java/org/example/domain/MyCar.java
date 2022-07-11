@@ -10,7 +10,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class MyCar {
     @Id @GeneratedValue
-    @Column(name = "comment_idx")
     private Long id;
 
     private String number;
