@@ -1,10 +1,11 @@
 package org.example;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.SpringApplication;
 
 @SpringBootApplication
-public class Main {
+public class UserApplication {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SpringApplication.run(UserApplication.class, args);
     }
 }
