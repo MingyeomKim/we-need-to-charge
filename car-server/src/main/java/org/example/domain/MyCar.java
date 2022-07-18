@@ -1,5 +1,6 @@
 package org.example.domain;
 
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,12 +11,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class MyCar {
     @Id @GeneratedValue
-    @Column(name = "comment_idx")
     private Long id;
 
     private String number;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)

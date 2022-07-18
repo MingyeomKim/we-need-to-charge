@@ -14,7 +14,6 @@ import javax.persistence.Id;
 public class Car {
 
     @Id @GeneratedValue
-    @Column(name = "car_idx")
     private Long id;
 
     private String company;
