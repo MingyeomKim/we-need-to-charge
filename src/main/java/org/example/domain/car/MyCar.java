@@ -1,8 +1,9 @@
-package org.example.domain;
+package org.example.domain.car;
 
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.domain.user.User;
 
 import javax.persistence.*;
 
